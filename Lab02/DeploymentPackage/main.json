@@ -389,7 +389,9 @@
         },
         "VMName": {
             "Description": "Name of the VM",
-            "Value": "labvm"
+            "Value": {
+                "Fn::Sub": "labvm-${CloudLabsDeploymentID}"
+            }
         },
         "VMPublicIP": {
             "Description": "VM Public IP",
