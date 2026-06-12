@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "Lab-2 AWS, AWS devops, Github, jenkins, git, terraform, cloud formaiton template",
+    "Language": "English",
+    "Files": [
+      { "RawFilePath": "https://raw.githubusercontent.com/fardeena-spektra/MicroLand/refs/heads/main/Lab02/LabGuidePackages/GettingStarted.md", "Order": 1 },
+      { "RawFilePath": "https://raw.githubusercontent.com/fardeena-spektra/MicroLand/refs/heads/main/Lab02/LabGuidePackages/labguide1.md", "Order": 1 },
+      { "RawFilePath": "https://raw.githubusercontent.com/fardeena-spektra/MicroLand/refs/heads/main/Lab02/LabGuidePackages/labguide2.md", "Order": 2 },
+      { "RawFilePath": "https://raw.githubusercontent.com/fardeena-spektra/MicroLand/refs/heads/main/Lab02/LabGuidePackages/labguide3.md", "Order": 3 },
+      { "RawFilePath": "https://raw.githubusercontent.com/fardeena-spektra/MicroLand/refs/heads/main/Lab02/LabGuidePackages/labguide4.md", "Order": 4 }
+    ]
+  }
+]
