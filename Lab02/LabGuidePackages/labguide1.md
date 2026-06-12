@@ -147,7 +147,7 @@ Your solution is successful when:
 
 After completing the task, click the **Validation** tab.
 
-<validation step="11111111-1111-1111-1111-111111111111" />
+<validation step="3d16c635-8911-455e-a4d9-623081184166" />
 
 ---
 
@@ -223,7 +223,7 @@ Your solution is successful when:
 
 After completing the task, click the **Validation** tab.
 
-<validation step="22222222-2222-2222-2222-222222222222" />
+<validation step="b48f9b97-91e1-4a1d-8ff8-fea87e4e3bf3" />
 
 ---
 

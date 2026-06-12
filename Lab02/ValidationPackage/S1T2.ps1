@@ -59,7 +59,7 @@ do {
             Body       = $message
         })
 
-        $stopRetry = $true
+        $stopRetry = $true 
     }
     catch {
 

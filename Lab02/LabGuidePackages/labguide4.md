@@ -208,7 +208,7 @@ Your configuration is successful when:
 
 After completing the task, click the **Validation** tab.
 
-<validation step="scenario4-task1-validation" />
+<validation step="0c612a60-e805-4973-b619-320b491b3428" />
 
 ---
 
@@ -361,7 +361,7 @@ Your solution is successful when:
 
 After completing the task, click the **Validation** tab.
 
-<validation step="scenario4-task2-validation" />
+<validation step="449a550b-831b-4b93-8c83-4059c7523819" />
 
 ---
 
