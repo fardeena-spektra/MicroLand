@@ -1,12 +1,12 @@
 # **Exercise 3: Deploy an IAM role for EC2 with Amazon S3 read access**
 
-## Lab Overview
+## **Lab Overview**
 
 In this lab, you will use AWS Identity and Access Management (IAM) to create an IAM role and attach an AWS managed policy to control permissions for AWS services and users.
 
 IAM roles provide temporary permissions and are widely used in AWS environments to implement the principle of least privilege and secure access to AWS resources.
 
-## Scenario
+## **Scenario**
 
 You have recently joined the Cloud Security team as a DevOps Engineer.
 
@@ -14,7 +14,7 @@ The organization requires controlled access to AWS resources through IAM roles i
 
 You have been provided access to an AWS environment and must configure the IAM role according to organizational requirements.
 
-## Solution
+## **Solution**
 
 To address this requirement, you will first create an IAM role with the appropriate trusted entity. You will then attach an AWS managed policy to grant the required permissions and verify that the role has been configured successfully.
 
@@ -22,7 +22,7 @@ This exercise demonstrates identity and access management concepts commonly used
 
 ---
 
-## Learning Objectives
+## **Learning Objectives**
 
 After completing this lab, you will be able to:
 
@@ -34,7 +34,7 @@ After completing this lab, you will be able to:
 
 ---
 
-## Environment Information
+## **Environment Information**
 
 You have been provided access to:
 
@@ -49,9 +49,9 @@ us-east-1
 
 ---
 
-## Assessment Objectives
+## **Assessment Objectives**
 
-### Task 1: Create an IAM Role
+### **Task 1: Create an IAM Role**
 
 Create an IAM role that:
 
@@ -61,7 +61,7 @@ Create an IAM role that:
 
 ---
 
-### Task 2: Attach an IAM Policy
+### **Task 2: Attach an IAM Policy**
 
 Configure the IAM role to:
 
@@ -75,15 +75,15 @@ AmazonS3ReadOnlyAccess
 
 ---
 
-# Detailed Instructions
+# **Detailed Instructions**
 
-# Task 1: Create an IAM Role
+# **Task 1: Create an IAM Role**
 
-## Task Overview
+## **Task Overview**
 
 In this task, you will create a new IAM role.
 
-### Step 1: Open IAM
+### **Step 1: Open IAM**
 
 From the AWS Management Console, search for:
 
@@ -95,7 +95,7 @@ Select the IAM service.
 
 ---
 
-### Step 2: Navigate to Roles
+### **Step 2: Navigate to Roles**
 
 From the navigation pane, choose:
 
@@ -111,7 +111,7 @@ Create role
 
 ---
 
-### Step 3: Configure Trusted Entity
+### **Step 3: Configure Trusted Entity**
 
 Select:
 
@@ -133,7 +133,7 @@ Next
 
 ---
 
-### Step 4: Specify Role Name
+### **Step 4: Specify Role Name**
 
 Role Name:
 
@@ -149,7 +149,7 @@ Create role
 
 ---
 
-## Task 1 Success Criteria
+## **Task 1 Success Criteria**
 
 Your solution is successful when:
 
@@ -165,13 +165,13 @@ After completing the task, click the **Validation** tab.
 
 ---
 
-# Task 2: Attach an IAM Policy
+# **Task 2: Attach an IAM Policy**
 
-## Task Overview
+## **Task Overview**
 
 In this task, you will attach an AWS managed policy to the IAM role.
 
-### Step 1: Open the IAM Role
+### **Step 1: Open the IAM Role**
 
 Select the role created in Task 1:
 
@@ -181,7 +181,7 @@ Lab-S3-ReadOnly-Role
 
 ---
 
-### Step 2: Add Permissions
+### **Step 2: Add Permissions**
 
 Choose:
 
@@ -197,7 +197,7 @@ Attach policies
 
 ---
 
-### Step 3: Select Policy
+### **Step 3: Select Policy**
 
 Search for:
 
@@ -215,7 +215,7 @@ Add permissions
 
 ---
 
-### Step 4: Verify Policy Attachment
+### **Step 4: Verify Policy Attachment**
 
 Confirm that the following policy appears under Permissions:
 
@@ -225,7 +225,7 @@ AmazonS3ReadOnlyAccess
 
 ---
 
-## Task 2 Success Criteria
+## **Task 2 Success Criteria**
 
 Your solution is successful when:
 
@@ -241,17 +241,17 @@ After completing the task, click the **Validation** tab.
 
 ---
 
-## Evaluation Criteria
+## **Evaluation Criteria**
 
 Your submission will be evaluated based on:
 
-### Task 1
+### **Task 1**
 
 * Correct creation of the IAM role.
 * Proper trusted entity configuration.
 * Successful validation completion.
 
-### Task 2
+### **Task 2**
 
 * Correct policy attachment.
 * Successful verification of permissions.
@@ -259,7 +259,7 @@ Your submission will be evaluated based on:
 
 ---
 
-## Completion Criteria
+## **Completion Criteria**
 
 You have successfully completed the assessment when:
 

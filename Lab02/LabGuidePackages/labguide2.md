@@ -1,12 +1,14 @@
 # **Exercise 2: Create CloudFormation Template for VPC**
 
-## Lab Overview
+## **Lab Overview**
 
 In this lab, you will use AWS CloudFormation to automate the creation of networking infrastructure. You will create a CloudFormation template that provisions a Virtual Private Cloud (VPC), store the template in Amazon S3, and deploy the template to create the required resources.
 
 Infrastructure as Code (IaC) enables organizations to standardize deployments, improve consistency, and reduce manual configuration errors.
 
-## Scenario
+---
+
+## **Scenario**
 
 You have recently joined the Cloud Engineering team as a DevOps Engineer.
 
@@ -16,7 +18,9 @@ Your manager has asked you to create a CloudFormation template that provisions a
 
 You have been provided access to an AWS environment to complete this task.
 
-## Solution
+---
+
+## **Solution**
 
 To address this requirement, you will first create a CloudFormation template defining a VPC resource. You will upload the template to an S3 bucket and then deploy the template through AWS CloudFormation.
 
@@ -24,7 +28,7 @@ This exercise demonstrates Infrastructure as Code principles commonly used in AW
 
 ---
 
-## Learning Objectives
+## **Learning Objectives**
 
 After completing this lab, you will be able to:
 
@@ -36,7 +40,7 @@ After completing this lab, you will be able to:
 
 ---
 
-## Environment Information
+## **Environment Information**
 
 You have been provided access to:
 
@@ -52,9 +56,9 @@ us-east-1
 
 ---
 
-## Assessment Objectives
+## **Assessment Objectives**
 
-### Task 1: Create and Upload a CloudFormation Template
+### **Task 1: Create and Upload a CloudFormation Template**
 
 Create a template that defines:
 
@@ -79,7 +83,7 @@ cftbucket-<inject key="CloudLabsDeploymentID" enableCopy="true"/>
 
 ---
 
-### Task 2: Deploy the CloudFormation Stack
+### **Task 2: Deploy the CloudFormation Stack**
 
 Deploy the template and verify that:
 
@@ -89,21 +93,21 @@ Deploy the template and verify that:
 
 ---
 
-# Detailed Instructions
+# **Detailed Instructions**
 
-# Task 1: Create and Upload the CloudFormation Template
+# **Task 1: Create and Upload the CloudFormation Template**
 
-## Task Overview
+## **Task Overview**
 
 In this task, you will create a CloudFormation template and upload it to Amazon S3.
 
-### Step 1: Open VS Code
+### **Step 1: Open VS Code**
 
 Launch VS Code from the lab virtual machine.
 
 ---
 
-### Step 2: Create Template File
+### **Step 2: Create Template File**
 
 Create a file named:
 
@@ -113,7 +117,7 @@ vpc-template.yaml
 
 ---
 
-### Step 3: Define the VPC Resource
+### **Step 3: Define the VPC Resource**
 
 Configure the template to create:
 
@@ -137,7 +141,7 @@ Lab-VPC-<inject key="CloudLabsDeploymentID" enableCopy="true"/>
 
 ---
 
-### Step 4: Save the Template
+### **Step 4: Save the Template**
 
 Save the file:
 
@@ -149,7 +153,7 @@ Verify the file exists.
 
 ---
 
-### Step 5: Create the S3 Bucket
+### **Step 5: Create the S3 Bucket**
 
 Using the AWS Console, create an S3 bucket named:
 
@@ -165,7 +169,7 @@ us-east-1
 
 ---
 
-### Step 6: Upload the Template
+### **Step 6: Upload the Template**
 
 Upload the following file into the bucket:
 
@@ -177,7 +181,7 @@ Verify that the file appears inside the bucket.
 
 ---
 
-## Task 1 Success Criteria
+## **Task 1 Success Criteria**
 
 Your solution is successful when:
 
@@ -195,13 +199,13 @@ After completing the task, click the **Validation** tab.
 
 ---
 
-# Task 2: Deploy the CloudFormation Stack
+# **Task 2: Deploy the CloudFormation Stack**
 
-## Task Overview
+## **Task Overview**
 
 In this task, you will deploy the CloudFormation stack.
 
-### Step 1: Open CloudFormation
+### **Step 1: Open CloudFormation**
 
 Search for:
 
@@ -213,7 +217,7 @@ Open the CloudFormation service.
 
 ---
 
-### Step 2: Create Stack
+### **Step 2: Create Stack**
 
 Choose:
 
@@ -229,7 +233,7 @@ With new resources (standard)
 
 ---
 
-### Step 3: Specify Template Source
+### **Step 3: Specify Template Source**
 
 Choose:
 
@@ -252,7 +256,7 @@ Next
 
 ---
 
-### Step 4: Configure Stack
+### **Step 4: Configure Stack**
 
 Specify the stack name:
 
@@ -270,7 +274,7 @@ Accept the default settings and continue.
 
 ---
 
-### Step 5: Deploy Stack
+### **Step 5: Deploy Stack**
 
 Choose:
 
@@ -282,7 +286,7 @@ Wait for deployment to complete.
 
 ---
 
-### Step 6: Verify Stack Status
+### **Step 6: Verify Stack Status**
 
 Confirm the stack status displays:
 
@@ -294,7 +298,7 @@ Verify that the VPC resource exists.
 
 ---
 
-## Task 2 Success Criteria
+## **Task 2 Success Criteria**
 
 Your solution is successful when:
 
@@ -311,18 +315,18 @@ After completing the task, click the **Validation** tab.
 
 ---
 
-## Evaluation Criteria
+## **Evaluation Criteria**
 
 Your submission will be evaluated based on:
 
-### Task 1
+### **Task 1**
 
 * Correct creation of the CloudFormation template.
 * Proper VPC configuration.
 * Successful upload to Amazon S3.
 * Successful validation completion.
 
-### Task 2
+### **Task 2**
 
 * Successful stack deployment.
 * Correct provisioning of the VPC.
@@ -331,7 +335,7 @@ Your submission will be evaluated based on:
 
 ---
 
-## Completion Criteria
+## **Completion Criteria**
 
 You have successfully completed the assessment when:
 

@@ -1,12 +1,14 @@
 # **Exercise 1: Create an Amazon S3 Bucket with Versioning Enabled**
 
-## Lab Overview
+## **Lab Overview**
 
 In this lab, you will use Amazon S3 to create and manage an object storage bucket and enable versioning to protect data from accidental deletion and overwrites.
 
 Amazon S3 versioning is commonly used by organizations to maintain historical versions of objects, support recovery processes, and improve data protection strategies.
 
-## Scenario
+---
+
+## **Scenario**
 
 You have recently joined the Cloud Operations team as a Junior DevOps Engineer.
 
@@ -14,7 +16,9 @@ The organization stores application assets and deployment artifacts in Amazon S3
 
 You have been provided access to an AWS environment and must configure the bucket according to organizational requirements.
 
-## Solution
+---
+
+## **Solution**
 
 To address this requirement, you will first create an Amazon S3 bucket using the AWS Management Console. After verifying the bucket creation, you will enable versioning to ensure multiple versions of uploaded objects can be retained.
 
@@ -22,7 +26,7 @@ This solution demonstrates fundamental AWS storage administration tasks frequent
 
 ---
 
-## Learning Objectives
+## **Learning Objectives**
 
 After completing this lab, you will be able to:
 
@@ -34,7 +38,7 @@ After completing this lab, you will be able to:
 
 ---
 
-## Environment Information
+## **Environment Information**
 
 You have been provided access to:
 
@@ -49,9 +53,9 @@ us-east-1
 
 ---
 
-## Assessment Objectives
+## **Assessment Objectives**
 
-### Task 1: Create an S3 Bucket
+### **Task 1: Create an S3 Bucket**
 
 Create an Amazon S3 bucket that:
 
@@ -61,7 +65,7 @@ Create an Amazon S3 bucket that:
 
 ---
 
-### Task 2: Enable Bucket Versioning
+### **Task 2: Enable Bucket Versioning**
 
 Configure the S3 bucket to:
 
@@ -71,15 +75,17 @@ Configure the S3 bucket to:
 
 ---
 
-# Detailed Instructions
+# **Detailed Instructions**
 
-# Task 1: Create an S3 Bucket
+# **Task 1: Create an S3 Bucket**
 
-## Task Overview
+## **Task Overview**
 
 In this task, you will create a new Amazon S3 bucket.
 
-### Step 1: Open Amazon S3
+---
+
+### **Step 1: Open Amazon S3**
 
 From the AWS Management Console:
 
@@ -93,7 +99,7 @@ S3
 
 ---
 
-### Step 2: Create the Bucket
+### **Step 2: Create the Bucket**
 
 Choose:
 
@@ -103,7 +109,7 @@ Create bucket
 
 ---
 
-### Step 3: Configure Bucket Details
+### **Step 3: Configure Bucket Details**
 
 Specify:
 
@@ -123,7 +129,7 @@ Leave other settings as default.
 
 ---
 
-### Step 4: Create the Bucket
+### **Step 4: Create the Bucket**
 
 Select:
 
@@ -135,7 +141,7 @@ Verify that the bucket appears in the bucket list.
 
 ---
 
-## Task 1 Success Criteria
+## **Task 1 Success Criteria**
 
 Your solution is successful when:
 
@@ -151,13 +157,13 @@ After completing the task, click the **Validation** tab.
 
 ---
 
-# Task 2: Enable Bucket Versioning
+# **Task 2: Enable Bucket Versioning**
 
-## Task Overview
+## **Task Overview**
 
 In this task, you will enable versioning on the S3 bucket.
 
-### Step 1: Open Bucket Properties
+### **Step 1: Open Bucket Properties**
 
 Select the bucket created in Task 1.
 
@@ -169,7 +175,7 @@ Properties
 
 ---
 
-### Step 2: Edit Versioning Settings
+### **Step 2: Edit Versioning Settings**
 
 Locate:
 
@@ -185,7 +191,7 @@ Edit
 
 ---
 
-### Step 3: Enable Versioning
+### **Step 3: Enable Versioning**
 
 Select:
 
@@ -202,7 +208,7 @@ Save changes
 
 ---
 
-### Step 4: Verify Configuration
+### **Step 4: Verify Configuration**
 
 Confirm the status displays:
 
@@ -211,10 +217,10 @@ Enabled
 ```
 
 ---
-### Step 5: Upload sample object
+### **Step 5: Upload sample object**
 ---
 
-## Task 2 Success Criteria
+## **Task 2 Success Criteria**
 
 Your solution is successful when:
 
@@ -231,17 +237,17 @@ After completing the task, click the **Validation** tab.
 
 ---
 
-## Evaluation Criteria
+## **Evaluation Criteria**
 
 Your submission will be evaluated based on:
 
-### Task 1
+### **Task 1**
 
 * Correct creation of the S3 bucket.
 * Proper bucket naming.
 * Successful validation completion.
 
-### Task 2
+### **Task 2**
 
 * Correct versioning configuration.
 * Successful verification of versioning status.
@@ -249,7 +255,7 @@ Your submission will be evaluated based on:
 
 ---
 
-## Completion Criteria
+## **Completion Criteria**
 
 You have successfully completed the assessment when:
 
