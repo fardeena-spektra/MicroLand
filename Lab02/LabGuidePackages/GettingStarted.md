@@ -48,7 +48,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 This allows you to follow instructions while working in the AWS Console simultaneously.
 
-![alt text](./images/0.png)
+![alt text](./images/02.png)
 
 ---
 
@@ -75,11 +75,11 @@ You may use VS Code to create CloudFormation templates and website files during 
 
 ---
 
-# **Managing Your Lab Resources**
+# **Managing Your Virtual Machine**
 
 You may Start, Restart, or Stop your virtual machine at any time using the **Resources** tab available within the lab environment.
 
-![alt text](../images/03.png)
+![alt text](./images/03.png)
 
 ---
 
@@ -87,7 +87,7 @@ You may Start, Restart, or Stop your virtual machine at any time using the **Res
 
 To adjust the zoom level of the lab environment page, use the zoom controls located next to the session timer.
 
-![alt text](../images/04.png)
+![alt text](./images/04.png)
 
 ---
 
@@ -99,7 +99,7 @@ After completing each task, select the **Validate** button located within the Va
 * If validation fails, carefully review the error message and revisit the task instructions before attempting validation again.
 * Ensure resources are created using the naming conventions specified within each exercise.
 
-![alt text](../images/05.png)
+![alt text](./images/05.png)
 
 ---
 
@@ -167,4 +167,4 @@ The CloudLabs support team is available 24/7 throughout your lab experience.
 
 Click **Next >>** to begin the assessment.
 
-![alt text](../images/06.png)
+![alt text](./images/06.png)
