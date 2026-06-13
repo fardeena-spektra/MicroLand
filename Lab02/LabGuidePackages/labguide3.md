@@ -1,4 +1,4 @@
-# **Scenario 3: Deploy IAM Role with Policy**
+# **Exercise 3: Deploy an IAM role for EC2 with Amazon S3 read access**
 
 ## Lab Overview
 

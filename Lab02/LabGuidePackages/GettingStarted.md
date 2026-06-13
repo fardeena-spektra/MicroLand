@@ -1,107 +1,99 @@
-# **Shell Scripting Advanced Assessment Lab**
-
+# AWS Cloud Challenge Lab 
 **Duration: 90 Minutes**
 
-## **Getting Started with the Lab**
+## Overview
 
-This lab is designed to evaluate your ability to work with Linux operating systems and Bash shell scripting in a real-world administration environment. Linux systems are widely used across organizations to host applications, automate operational tasks, manage services, monitor system health, and process log data. System administrators and DevOps engineers frequently rely on shell scripting to improve efficiency, reduce manual effort, and automate repetitive tasks.
+Welcome to the **AWS CloudFormation Challenge Lab**. In this lab, you will use a **Windows virtual machine** and the **AWS Management Console** to build and deploy CloudFormation YAML templates for common AWS infrastructure scenarios.
 
-In this lab, you will perform a series of Linux administration and shell scripting tasks on a provisioned virtual machine. You will create and modify scripts, manage services, analyze log files, generate reports, schedule tasks, and automate common administrative operations. Throughout the assessment, you will apply core Linux concepts including file management, permissions, process management, service administration, text processing, and shell scripting techniques.
+During the lab, you will create an Amazon S3 bucket with versioning enabled, deploy a VPC with subnets and route tables, create an IAM role for EC2 with Amazon S3 read access, and host a static website using Amazon S3. You will verify your work by using both the AWS console and validation checks provided in the lab.
 
-By the end of the lab, you will have demonstrated your ability to work effectively in a Linux environment and automate operational tasks using Bash scripting.
+## Accessing Your Lab Environment
 
----
+This lab provides a **Windows VM** that you will use to review instructions and complete the required tasks. Use the credentials and connection details provided in the lab environment to access the virtual machine.
 
-# **Accessing Your Lab Environment**
+1. From the lab environment page, locate the connection details for the virtual machine.
+2. Open the VM from the lab interface.
+3. Wait for the desktop session to load completely before starting the exercises.
+4. Keep the lab instructions available while you work through each task.
 
-Once you're ready to begin, your Linux virtual machine and lab guide will be available directly within your browser.
+![](./media/gettingstarted-01.png)
 
-## **Virtual Machine & Lab Guide**
+## AWS Console & Lab Guide
 
-Your virtual machine is the environment where all lab activities will be performed. The lab guide provides step-by-step instructions and validation requirements for each task.
+Use the lab guide together with the AWS Management Console throughout this challenge. Read each exercise carefully before making changes in AWS so that your deployed resources match the required configuration.
 
-![alt text](../images/00.png)
----
+As you progress through the lab, use the console to review stack deployments, inspect resources, and confirm that your templates produce the expected outcomes.
 
-# **Exploring Your Lab Resources**
+![](./media/gettingstarted-02.png)
 
-To view environment information, credentials, and resource details, navigate to the **Environment** tab.
+## Exploring Your Lab Resources
 
-![alt text](../images/01.png)
+Your lab environment is designed to support template authoring, deployment, and verification. During this challenge, you will work with resources and services that support the following tasks:
 
----
-# **Utilizing the Split Window Feature**
+- Creating CloudFormation JSON templates
+- Deploying stacks by using AWS CloudFormation
+- Verifying Amazon S3 configuration and versioning
+- Reviewing Amazon VPC networking resources
+- Checking IAM role trust and permissions
+- Validating Amazon S3 static website hosting
 
-For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the Top right corner.
+## Utilizing the Split Window Feature
 
-![alt text](../images/02.png)
+For a better experience, use the split window feature so that you can view the **lab guide** and your **lab environment** at the same time. This helps you follow the instructions while completing the tasks without switching back and forth repeatedly.
 
-# **Connecting to the Virtual Machine**
+![](./media/gettingstarted-03.png)
 
-You may connect to the Linux virtual machine using SSH.
+## Accessing the AWS Management Console
 
-### **SSH Command**
+Use the following steps to sign in to the AWS Management Console:
 
-```bash
-ssh <inject key="VMUserName" enableCopy="true"/>@<inject key="VMPublicDNSName" enableCopy="true"/>
-```
+1. Open the AWS sign-in page: <inject key="AwsConsoleUrl"></inject>
+2. Sign in with the following credentials:
+   - **IAM user name:** <inject key="IamUserName"></inject>
+   - **IAM user password:** <inject key="IamUserPassword"></inject>
+3. After sign-in, verify that you are working in AWS account **<inject key="AwsAccountId"></inject>**.
+4. Keep your deployment identifier available if you need it during the lab: **<inject key="DeploymentID"></inject>**.
 
-### **Username**
+![](./media/gettingstarted-04.png)
 
-```text
-<inject key="VMUserName" enableCopy="true"/>
-```
+## AWS Region
 
-### **Password**
+Make sure that you complete the entire lab in **AWS Region** **<inject key="AwsRegion"></inject>**.
 
-```text
-<inject key="VMPassword" enableCopy="true"/>
-```
+> [!Important]
+> If you switch to a different Region, your resources, CloudFormation stacks, and validation results may not match the lab requirements.
 
----
+## Lab Guide Zoom In / Zoom Out
 
-These commands should display your current username and the hostname of the lab virtual machine.
+You can adjust the zoom level of the lab guide to improve readability while working through the instructions. Use the zoom controls available in the lab interface as needed.
 
----
+## Lab Validation
 
-# **Managing Your Virtual Machine**
+This challenge includes validation checks to help confirm that each exercise has been completed correctly. Run validation only after finishing the required steps for an exercise.
 
-You may Start, Restart, or Stop your virtual machine at any time using the **Resources** tab available within the lab environment.
+If a validation does not pass, review your deployed resources, confirm the selected AWS Region, and correct the issue before trying again.
 
-![alt text](../images/03.png)
+## Assessment Best Practices
 
----
+- Read each instruction fully before you begin a task.
+- Stay in the required AWS Region throughout the lab.
+- Use the AWS Management Console to verify your deployed resources.
+- Confirm that your CloudFormation templates match the exercise objectives.
+- Save your work frequently as you progress through the exercises.
 
-# **Lab Guide Zoom In / Zoom Out**
+## Support Contact
 
-To adjust the zoom level of the lab environment page, use the zoom controls located next to the session timer.
+If you encounter issues with the lab environment, contact your lab administrator or the support channel provided for your course.
 
-![alt text](../images/04.png)
+## Learner Support
 
----
+If you need help during the lab, review the current exercise instructions carefully, verify that you are signed in with the provided AWS credentials, and make sure you are still working in the correct AWS Region.
 
-# **Lab Validation**
+Click **Next >>** to continue.
 
-After completing each task, select the **Validate** button located within the Validation section of the lab guide.
+## After publishing
 
-* If validation succeeds, proceed to the next task.
-* If validation fails, carefully review the error message and revisit the task instructions before attempting validation again.
+> [!Note] These steps run **after** you push the template to CloudLabs — they verify CloudLabs can actually serve this lab guide to candidates.
 
-![alt text](../images/05.png)
-
----
-
-# **Support Contact**
-
-The CloudLabs support team is available 24/7 throughout your lab experience.
-
-### **Learner Support**
-
-**Email Support:** [labs-support@spektrasystems.com](mailto:labs-support@spektrasystems.com)
-
-**Live Chat Support:** https://cloudlabs.ai/labs-support
-
----
-
-Click **Next >>** to begin the assessment.
-![alt text](../images/06.png)
+- **Verify docs-proxy access:** open Templates → your template → **Lab Guide Settings** in <https://admin.cloudlabs.ai> and confirm CloudLabs can reach this repo via the docs proxy. If the repo is private, configure GitHub access at the template level.
+- **Verify inline questions and inline validations:** sign in to <https://admin.cloudlabs.ai>, open your template, and walk through one full lab run to confirm every `<question>` and `<validation step="..."/>` renders correctly. Fix any that don't resolve.

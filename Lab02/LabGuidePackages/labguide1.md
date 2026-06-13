@@ -1,4 +1,4 @@
-# **Scenario 1: Create S3 Bucket with Versioning**
+# **Exercise 1: Create an Amazon S3 Bucket with Versioning Enabled**
 
 ## Lab Overview
 
@@ -199,6 +199,7 @@ Choose:
 Save changes
 ```
 
+
 ---
 
 ### Step 4: Verify Configuration
@@ -210,6 +211,8 @@ Enabled
 ```
 
 ---
+### Step 5: Upload sample object
+---
 
 ## Task 2 Success Criteria
 
@@ -218,6 +221,7 @@ Your solution is successful when:
 * Bucket versioning is enabled.
 * The bucket retains version history.
 * The configuration has been saved successfully.
+* The bucket should have atleast 1 object presenent
 
 ---
 
@@ -251,6 +255,7 @@ You have successfully completed the assessment when:
 
 * An S3 bucket has been created.
 * Bucket versioning has been enabled.
+* Object has been uploaded.
 * Both validation steps complete successfully.
 
 You have successfully completed the Assessment.

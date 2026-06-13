@@ -1,4 +1,4 @@
-# **Scenario 4: Host a Static Website Using Amazon S3**
+# **Exercise 4: Host a Static Website Using Amazon S3**
 
 ## **Lab Overview**
 

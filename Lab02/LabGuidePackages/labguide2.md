@@ -1,4 +1,4 @@
-# **Scenario 2: Create CloudFormation Template for VPC**
+# **Exercise 2: Create CloudFormation Template for VPC**
 
 ## Lab Overview
 
@@ -237,10 +237,16 @@ Choose:
 Amazon S3 URL
 ```
 
-Use the template stored in:
+Use the template stored in Amazon S3 using the following URL format:
 
 ```text
-s3://cftbucket-<inject key="CloudLabsDeploymentID" enableCopy="true"/>/vpc-template.yaml
+https://cftbucket-<inject key="CloudLabsDeploymentID" enableCopy="true"/>.s3.amazonaws.com/vpc-template.yaml
+```
+
+Example:
+
+```text
+https://cftbucket-2272985.s3.amazonaws.com/vpc-template.yaml
 ```
 
 Choose:
@@ -248,6 +254,7 @@ Choose:
 ```text
 Next
 ```
+
 
 ---
 
