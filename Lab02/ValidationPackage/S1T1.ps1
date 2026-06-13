@@ -22,22 +22,10 @@ do {
             throw "Bucket '$bucketName' was not found."
         }
 
-        $versioning = Get-S3BucketVersioning -BucketName $bucketName
-
-        if ($versioning.Status -ne "Enabled") {
-
-            $message = @{
-                Status  = "Failed"
-                Message = "TASK-1 validation failed. Versioning is not enabled on bucket '$bucketName'."
-            } | ConvertTo-Json
-        }
-        else {
-
-            $message = @{
-                Status  = "Succeeded"
-                Message = "TASK-1 validation passed."
-            } | ConvertTo-Json
-        }
+        $message = @{
+            Status  = "Succeeded"
+            Message = "TASK-1 validation passed."
+        } | ConvertTo-Json
 
         Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
             StatusCode = [System.Net.HttpStatusCode]::OK

@@ -10,56 +10,74 @@ $maxRetries = 3
 do {
     try {
 
-        # Authentication Check
         $identity = Get-STSCallerIdentity
         $identity.Arn | Out-Null
 
-        # Verify that a custom IAM role exists with an attached policy
-        $roles = Get-IAMRole
+        $instanceName = "labvm-$deployment_id"
+        $roleName = "Lab-S3-ReadOnly-Role"
+        $policyName = "AmazonS3ReadOnlyAccess"
 
-        if (-not $roles) {
-            throw "No IAM roles found."
+        #
+        # Verify EC2 Instance Exists
+        #
+        $instance = (
+            Get-EC2Instance -Region $region -Filter @{
+                Name   = "tag:Name"
+                Values = $instanceName
+            }
+        ).Instances | Select-Object -First 1
+
+        if (-not $instance) {
+            throw "EC2 instance '$instanceName' was not found."
         }
 
-        $validationPassed = $false
+        #
+        # Verify IAM Instance Profile Attached
+        #
+        if (-not $instance.IamInstanceProfile) {
+            throw "No IAM Instance Profile attached to '$instanceName'."
+        }
 
-        foreach ($role in $roles) {
+        #
+        # Get Instance Profile Name
+        #
+        $profileName = ($instance.IamInstanceProfile.Arn -split "/")[-1]
 
-            # Ignore AWS service-linked roles
-            if ($role.Path -like "/aws-service-role/*") {
-                continue
+        #
+        # Verify Role Exists in Instance Profile
+        #
+        $profile = Get-IAMInstanceProfile `
+            -InstanceProfileName $profileName
+
+        $roleExists = $profile.Roles |
+            Where-Object {
+                $_.RoleName -eq $roleName
             }
 
-            try {
+        if (-not $roleExists) {
+            throw "Role '$roleName' is not attached to instance '$instanceName'."
+        }
 
-                $attachedPolicies = Get-IAMAttachedRolePolicy `
-                    -RoleName $role.RoleName
-
-                if ($attachedPolicies) {
-                    $validationPassed = $true
-                    break
-                }
-
+        #
+        # Verify Policy Attached to Role
+        #
+        $policyExists = Get-IAMAttachedRolePolicies `
+            -RoleName $roleName |
+            Where-Object {
+                $_.PolicyName -eq $policyName
             }
-            catch {
-                continue
-            }
+
+        if (-not $policyExists) {
+            throw "Policy '$policyName' is not attached to role '$roleName'."
         }
 
-        if ($validationPassed) {
-
-            $message = @{
-                Status  = "Succeeded"
-                Message = "TASK-2 validation passed."
-            } | ConvertTo-Json
-        }
-        else {
-
-            $message = @{
-                Status  = "Failed"
-                Message = "TASK-2 validation failed. No custom IAM role with an attached policy was found."
-            } | ConvertTo-Json
-        }
+        #
+        # Success
+        #
+        $message = @{
+            Status  = "Succeeded"
+            Message = "TASK-2 validation passed."
+        } | ConvertTo-Json
 
         Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
             StatusCode = [System.Net.HttpStatusCode]::OK
@@ -92,4 +110,3 @@ do {
     }
 
 } while ($stopRetry -eq $false)
-
