@@ -1,99 +1,170 @@
-# AWS Cloud Challenge Lab 
+# **AWS Cloud Challenge Lab** 
 **Duration: 90 Minutes**
 
-## Overview
+## **Getting Started with the Lab**
 
-Welcome to the **AWS CloudFormation Challenge Lab**. In this lab, you will use a **Windows virtual machine** and the **AWS Management Console** to build and deploy CloudFormation YAML templates for common AWS infrastructure scenarios.
+This lab is designed to evaluate your ability to work with core AWS services commonly used in cloud administration and operations. Organizations rely on AWS to provision infrastructure, manage storage, control access to resources, and host applications securely and efficiently.
 
-During the lab, you will create an Amazon S3 bucket with versioning enabled, deploy a VPC with subnets and route tables, create an IAM role for EC2 with Amazon S3 read access, and host a static website using Amazon S3. You will verify your work by using both the AWS console and validation checks provided in the lab.
+In this assessment, you will perform a series of practical tasks using Amazon Web Services (AWS). You will create and manage Amazon S3 buckets, configure bucket versioning, develop and deploy AWS CloudFormation templates, create and configure IAM roles and permissions, attach instance profiles, and host a static website using Amazon S3.
 
-## Accessing Your Lab Environment
+Throughout the assessment, you will apply fundamental AWS concepts including object storage management, Infrastructure as Code using CloudFormation, identity and access management, instance role configuration, and static website hosting.
 
-This lab provides a **Windows VM** that you will use to review instructions and complete the required tasks. Use the credentials and connection details provided in the lab environment to access the virtual machine.
+By the end of the lab, you will have demonstrated your ability to provision, configure, and validate AWS resources using industry-standard practices commonly followed by cloud administrators, cloud support engineers, and AWS operations professionals.
+---
 
-1. From the lab environment page, locate the connection details for the virtual machine.
-2. Open the VM from the lab interface.
-3. Wait for the desktop session to load completely before starting the exercises.
-4. Keep the lab instructions available while you work through each task.
+# **Accessing Your Lab Environment**
 
-![](./media/gettingstarted-01.png)
+Once you're ready to begin, your lab environment and assessment guides will be available directly within your browser.
 
-## AWS Console & Lab Guide
+## **Virtual Machine & Lab Guide**
 
-Use the lab guide together with the AWS Management Console throughout this challenge. Read each exercise carefully before making changes in AWS so that your deployed resources match the required configuration.
+Your virtual machine provides the tools required to complete the assessment activities, including VS Code, Git, and browser access to the AWS Management Console.
 
-As you progress through the lab, use the console to review stack deployments, inspect resources, and confirm that your templates produce the expected outcomes.
+The lab guide provides step-by-step instructions and validation requirements for each task.
 
-![](./media/gettingstarted-02.png)
+![alt text](./images/00.png)
 
-## Exploring Your Lab Resources
+---
 
-Your lab environment is designed to support template authoring, deployment, and verification. During this challenge, you will work with resources and services that support the following tasks:
+# **Exploring Your Lab Resources**
 
-- Creating CloudFormation JSON templates
-- Deploying stacks by using AWS CloudFormation
-- Verifying Amazon S3 configuration and versioning
-- Reviewing Amazon VPC networking resources
-- Checking IAM role trust and permissions
-- Validating Amazon S3 static website hosting
+To view environment information, credentials, and resource details, navigate to the **Environment** tab.
 
-## Utilizing the Split Window Feature
+You can find:
 
-For a better experience, use the split window feature so that you can view the **lab guide** and your **lab environment** at the same time. This helps you follow the instructions while completing the tasks without switching back and forth repeatedly.
+* AWS Console URL
+* AWS Username
+* AWS Password
+* Deployment Information
+* Resource Details
 
-![](./media/gettingstarted-03.png)
+![alt text](./images/01.png)
 
-## Accessing the AWS Management Console
+---
 
-Use the following steps to sign in to the AWS Management Console:
+# **Utilizing the Split Window Feature**
 
-1. Open the AWS sign-in page: <inject key="AwsConsoleUrl"></inject>
-2. Sign in with the following credentials:
-   - **IAM user name:** <inject key="IamUserName"></inject>
-   - **IAM user password:** <inject key="IamUserPassword"></inject>
-3. After sign-in, verify that you are working in AWS account **<inject key="AwsAccountId"></inject>**.
-4. Keep your deployment identifier available if you need it during the lab: **<inject key="DeploymentID"></inject>**.
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top-right corner.
 
-![](./media/gettingstarted-04.png)
+This allows you to follow instructions while working in the AWS Console simultaneously.
 
-## AWS Region
+![alt text](./images/0.png)
 
-Make sure that you complete the entire lab in **AWS Region** **<inject key="AwsRegion"></inject>**.
+---
 
-> [!Important]
-> If you switch to a different Region, your resources, CloudFormation stacks, and validation results may not match the lab requirements.
 
-## Lab Guide Zoom In / Zoom Out
+### **AWS Region**
 
-You can adjust the zoom level of the lab guide to improve readability while working through the instructions. Use the zoom controls available in the lab interface as needed.
+```text
+us-east-1
+```
 
-## Lab Validation
+---
 
-This challenge includes validation checks to help confirm that each exercise has been completed correctly. Run validation only after finishing the required steps for an exercise.
+# **Using the Virtual Machine**
 
-If a validation does not pass, review your deployed resources, confirm the selected AWS Region, and correct the issue before trying again.
+The provided virtual machine contains the tools required for the assessment.
 
-## Assessment Best Practices
+Installed tools include:
 
-- Read each instruction fully before you begin a task.
-- Stay in the required AWS Region throughout the lab.
-- Use the AWS Management Console to verify your deployed resources.
-- Confirm that your CloudFormation templates match the exercise objectives.
-- Save your work frequently as you progress through the exercises.
+* Visual Studio Code (VS Code)
+* Git
+* Web Browser
 
-## Support Contact
+You may use VS Code to create CloudFormation templates and website files during the assessment.
 
-If you encounter issues with the lab environment, contact your lab administrator or the support channel provided for your course.
+---
 
-## Learner Support
+# **Managing Your Lab Resources**
 
-If you need help during the lab, review the current exercise instructions carefully, verify that you are signed in with the provided AWS credentials, and make sure you are still working in the correct AWS Region.
+You may Start, Restart, or Stop your virtual machine at any time using the **Resources** tab available within the lab environment.
 
-Click **Next >>** to continue.
+![alt text](../images/03.png)
 
-## After publishing
+---
 
-> [!Note] These steps run **after** you push the template to CloudLabs — they verify CloudLabs can actually serve this lab guide to candidates.
+# **Lab Guide Zoom In / Zoom Out**
 
-- **Verify docs-proxy access:** open Templates → your template → **Lab Guide Settings** in <https://admin.cloudlabs.ai> and confirm CloudLabs can reach this repo via the docs proxy. If the repo is private, configure GitHub access at the template level.
-- **Verify inline questions and inline validations:** sign in to <https://admin.cloudlabs.ai>, open your template, and walk through one full lab run to confirm every `<question>` and `<validation step="..."/>` renders correctly. Fix any that don't resolve.
+To adjust the zoom level of the lab environment page, use the zoom controls located next to the session timer.
+
+![alt text](../images/04.png)
+
+---
+
+# **Lab Validation**
+
+After completing each task, select the **Validate** button located within the Validation section of the lab guide.
+
+* If validation succeeds, proceed to the next task.
+* If validation fails, carefully review the error message and revisit the task instructions before attempting validation again.
+* Ensure resources are created using the naming conventions specified within each exercise.
+
+![alt text](../images/05.png)
+
+---
+
+# **Assessment Overview**
+
+During this assessment, you will complete the following exercises:
+
+## **Exercise 1: Create an Amazon S3 Bucket with Versioning Enabled**
+
+You will:
+
+* Create an Amazon S3 bucket.
+* Enable bucket versioning.
+* Upload sample content.
+* Verify versioning configuration.
+
+---
+
+## **Exercise 2: Create CloudFormation Template for VPC**
+
+You will:
+
+* Create a CloudFormation template using YAML.
+* Define a VPC resource.
+* Upload the template to Amazon S3.
+* Deploy a CloudFormation stack.
+* Verify the deployed infrastructure.
+
+---
+
+## **Exercise 3: Deploy an IAM Role for EC2 with Amazon S3 Read Access**
+
+You will:
+
+* Create an IAM role.
+* Configure EC2 as the trusted entity.
+* Attach the AmazonS3ReadOnlyAccess managed policy.
+* Verify permissions.
+
+---
+
+## **Exercise 4: Host a Static Website Using Amazon S3**
+
+You will:
+
+* Create an S3 bucket for website hosting.
+* Configure static website hosting.
+* Upload website content.
+* Configure public access.
+* Verify website accessibility.
+
+---
+
+# **Support Contact**
+
+The CloudLabs support team is available 24/7 throughout your lab experience.
+
+### **Learner Support**
+
+**Email Support:** [labs-support@spektrasystems.com](mailto:labs-support@spektrasystems.com)
+
+**Live Chat Support:** https://cloudlabs.ai/labs-support
+
+---
+
+Click **Next >>** to begin the assessment.
+
+![alt text](../images/06.png)

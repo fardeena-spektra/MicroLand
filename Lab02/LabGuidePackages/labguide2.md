@@ -243,12 +243,6 @@ Use the template stored in Amazon S3 using the following URL format:
 https://cftbucket-<inject key="CloudLabsDeploymentID" enableCopy="true"/>.s3.amazonaws.com/vpc-template.yaml
 ```
 
-Example:
-
-```text
-https://cftbucket-2272985.s3.amazonaws.com/vpc-template.yaml
-```
-
 Choose:
 
 ```text
