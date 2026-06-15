@@ -224,6 +224,12 @@ AmazonS3ReadOnlyAccess
 ```
 
 ---
+### **Step 5: Attach IAM role to given EC2 Instance**
+
+#### Instance Name :
+```
+labvm-<inject key="CloudLabsDeploymentID" enableCopy="true"/>
+```
 
 ## **Task 2 Success Criteria**
 
@@ -232,6 +238,7 @@ Your solution is successful when:
 * The IAM role contains the required policy.
 * The policy attachment completes successfully.
 * Permissions are visible on the role.
+* IAM role should be Attached to given EC2 Instance.
 
 ---
 
