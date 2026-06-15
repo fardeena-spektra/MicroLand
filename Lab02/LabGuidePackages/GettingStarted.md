@@ -7,7 +7,9 @@ This lab is designed to evaluate your ability to work with core AWS services com
 
 In this assessment, you will perform a series of practical tasks using Amazon Web Services (AWS). You will create and manage Amazon S3 buckets, configure bucket versioning, develop and deploy AWS CloudFormation templates, create and configure IAM roles and permissions, attach instance profiles, and host a static website using Amazon S3.
 
-Throughout the assessment, you will apply fundamental AWS concepts including object storage management, Infrastructure as Code using CloudFormation, identity and access management, instance role configuration, and static website hostingBy the end of the lab, you will have demonstrated your ability to provision, configure, and validate AWS resources using industry-standard practices commonly followed by cloud administrators, cloud support engineers, and AWS operations professionals.
+Throughout the assessment, you will apply fundamental AWS concepts including object storage management, Infrastructure as Code using CloudFormation, identity and access management, instance role configuration, and static website hosting.
+
+By the end of the lab, you will have demonstrated your ability to provision, configure, and validate AWS resources using industry-standard practices commonly followed by cloud administrators, cloud support engineers, and AWS operations professionals.
 
 
 
