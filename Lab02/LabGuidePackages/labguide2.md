@@ -274,8 +274,12 @@ Accept the default settings and continue.
 
 ---
 
-### **Step 5: Deploy Stack**
+### **Step 5: Select IAM role & Deploy Stack**
+Select following role :
 
+```
+cft-vpc-role
+```
 Choose:
 
 ```text
