@@ -27,7 +27,7 @@
     },
 
     {
-      "Sid": "AllowEC2InUsEast1",
+      "Sid": "AllowEC2AndVPCAccessInUsEast1",
       "Effect": "Allow",
       "Action": "ec2:*",
       "Resource": "*",
@@ -39,21 +39,45 @@
     },
 
     {
-      "Sid": "AllowIAMReadAndCreateRolesOnly",
+      "Sid": "AllowIAMRoleAndPolicyManagement",
       "Effect": "Allow",
       "Action": [
         "iam:GetRole",
         "iam:ListRoles",
         "iam:CreateRole",
+        "iam:UpdateRole",
+        "iam:UpdateAssumeRolePolicy",
         "iam:TagRole",
         "iam:UntagRole",
         "iam:ListRoleTags",
+
+        "iam:ListPolicies",
+        "iam:GetPolicy",
+        "iam:GetPolicyVersion",
+
         "iam:ListAttachedRolePolicies",
         "iam:AttachRolePolicy",
         "iam:DetachRolePolicy",
+
         "iam:PutRolePolicy",
         "iam:GetRolePolicy",
+        "iam:DeleteRolePolicy",
         "iam:ListRolePolicies"
+      ],
+      "Resource": "*"
+    },
+
+    {
+      "Sid": "AllowInstanceProfileManagement",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateInstanceProfile",
+        "iam:GetInstanceProfile",
+        "iam:ListInstanceProfiles",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:TagInstanceProfile",
+        "iam:UntagInstanceProfile"
       ],
       "Resource": "*"
     },
@@ -77,19 +101,32 @@
     },
 
     {
-      "Sid": "DenyIAMDeleteAndUserGroupManagement",
+      "Sid": "DenyIAMDeleteActions",
       "Effect": "Deny",
       "Action": [
         "iam:DeleteRole",
         "iam:DeletePolicy",
-        "iam:DetachRolePolicy",
-        "iam:RemoveRoleFromInstanceProfile",
+        "iam:DeleteInstanceProfile"
+      ],
+      "Resource": "*"
+    },
+
+    {
+      "Sid": "DenyIAMUserAndGroupManagement",
+      "Effect": "Deny",
+      "Action": [
         "iam:CreateUser",
-        "iam:CreateGroup",
-        "iam:AddUserToGroup",
-        "iam:RemoveUserFromGroup",
         "iam:DeleteUser",
-        "iam:DeleteGroup"
+        "iam:UpdateUser",
+        "iam:ListUsers",
+
+        "iam:CreateGroup",
+        "iam:DeleteGroup",
+        "iam:UpdateGroup",
+        "iam:ListGroups",
+
+        "iam:AddUserToGroup",
+        "iam:RemoveUserFromGroup"
       ],
       "Resource": "*"
     }
