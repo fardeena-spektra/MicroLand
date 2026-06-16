@@ -59,9 +59,7 @@ This allows you to follow instructions while working in the AWS Console simultan
 
 ### **AWS Region**
 
-```text
-us-east-1
-```
+``us-east-1``
 
 ---
 
