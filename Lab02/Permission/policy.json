@@ -5,21 +5,34 @@
       "Sid": "AllowS3FullAccess",
       "Effect": "Allow",
       "Action": "s3:*",
-      "Resource": "*"
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
     },
     {
-      "Sid": "AllowCloudFormationFullAccess",
+      "Sid": "AllowCloudFormationFullAccessInUsEast1",
       "Effect": "Allow",
       "Action": "cloudformation:*",
-      "Resource": "*"
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
     },
     {
-      "Sid": "AllowEC2AndVPCAccess",
+      "Sid": "AllowEC2AndVPCAccessInUsEast1",
       "Effect": "Allow",
-      "Action": [
-        "ec2:*"
-      ],
-      "Resource": "*"
+      "Action": "ec2:*",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
     },
     {
       "Sid": "AllowIAMRoleManagementForSpecificRole",
@@ -43,6 +56,19 @@
         "iam:PassRole"
       ],
       "Resource": "arn:aws:iam::*:role/Lab-S3-ReadOnly-Role"
+    },
+    {
+      "Sid": "AllowPassRoleForCloudFormationRoles",
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": [
+        "arn:aws:iam::*:role/cft-vpc-role"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "iam:PassedToService": "cloudformation.amazonaws.com"
+        }
+      }
     },
     {
       "Sid": "AllowInstanceProfileManagementForSpecificRole",
@@ -69,6 +95,28 @@
         "iam:GetPolicyVersion"
       ],
       "Resource": "*"
+    },
+    {
+      "Sid": "DenyCloudFormationOutsideUsEast1",
+      "Effect": "Deny",
+      "Action": "cloudformation:*",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
+    },
+    {
+      "Sid": "DenyEC2OutsideUsEast1",
+      "Effect": "Deny",
+      "Action": "ec2:*",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
     }
   ]
 }
