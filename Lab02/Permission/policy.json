@@ -34,6 +34,7 @@
         }
       }
     },
+
     {
       "Sid": "AllowIAMRoleManagementForSpecificRole",
       "Effect": "Allow",
@@ -52,17 +53,18 @@
         "iam:PutRolePolicy",
         "iam:GetRolePolicy",
         "iam:DeleteRolePolicy",
-        "iam:ListRolePolicies",
-        "iam:PassRole"
+        "iam:ListRolePolicies"
       ],
       "Resource": "arn:aws:iam::*:role/Lab-S3-ReadOnly-Role"
     },
+
     {
       "Sid": "AllowPassRoleForCloudFormationRoles",
       "Effect": "Allow",
       "Action": "iam:PassRole",
       "Resource": [
-        "arn:aws:iam::*:role/cft-vpc-role"
+        "arn:aws:iam::*:role/cft-vpc-role",
+        "arn:aws:iam::*:role/Lab-S3-ReadOnly-Role"
       ],
       "Condition": {
         "StringEquals": {
@@ -70,6 +72,7 @@
         }
       }
     },
+
     {
       "Sid": "AllowInstanceProfileManagementForSpecificRole",
       "Effect": "Allow",
@@ -84,6 +87,7 @@
       ],
       "Resource": "arn:aws:iam::*:instance-profile/Lab-S3-ReadOnly-Role"
     },
+
     {
       "Sid": "AllowListPermissionsForIAM",
       "Effect": "Allow",
@@ -96,6 +100,7 @@
       ],
       "Resource": "*"
     },
+
     {
       "Sid": "DenyCloudFormationOutsideUsEast1",
       "Effect": "Deny",
