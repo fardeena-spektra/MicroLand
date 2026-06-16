@@ -47,9 +47,7 @@ You have been provided access to:
 
 AWS Region:
 
-```text
-us-east-1
-```
+`us-east-1`
 
 ---
 
@@ -79,37 +77,33 @@ Configure the S3 bucket to:
 
 # **Task 1: Create an S3 Bucket**
 
-## **Task Overview**
+### **Task Overview**
 
 In this task, you will create a new Amazon S3 bucket.
 
 ---
 
-### **Step 1: Open Amazon S3**
+**Step 1: Open Amazon S3**
 
 From the AWS Management Console:
 
 1. Search for:
 
-```text
-S3
-```
+`S3`
 
 2. Select **Amazon S3**.
 
 ---
 
-### **Step 2: Create the Bucket**
+**Step 2: Create the Bucket**
 
 Choose:
 
-```text
-Create bucket
-```
+`Create bucket`
 
 ---
 
-### **Step 3: Configure Bucket Details**
+**Step 3: Configure Bucket Details**
 
 Specify:
 
@@ -121,21 +115,17 @@ lab-bucket-<inject key="CloudLabsDeploymentID"/>
 
 AWS Region:
 
-```text
-us-east-1
-```
+`us-east-1`
 
 Leave other settings as default.
 
 ---
 
-### **Step 4: Create the Bucket**
+**Step 4: Create the Bucket**
 
 Select:
 
-```text
-Create bucket
-```
+`Create bucket`
 
 Verify that the bucket appears in the bucket list.
 
@@ -157,67 +147,57 @@ After completing the task, click the **Validation** tab.
 
 ---
 
-# **Task 2: Enable Bucket Versioning**
+## **Task 2: Enable Bucket Versioning**
 
-## **Task Overview**
+### **Task Overview**
 
 In this task, you will enable versioning on the S3 bucket.
 
-### **Step 1: Open Bucket Properties**
+**Step 1: Open Bucket Properties**
 
 Select the bucket created in Task 1.
 
 Choose:
 
-```text
-Properties
-```
+`Properties`
 
 ---
 
-### **Step 2: Edit Versioning Settings**
+**Step 2: Edit Versioning Settings**
 
 Locate:
 
-```text
-Bucket Versioning
-```
+`Bucket Versioning`
 
 Choose:
 
-```text
-Edit
-```
+`Edit`
 
 ---
 
-### **Step 3: Enable Versioning**
+**Step 3: Enable Versioning**
 
 Select:
 
-```text
-Enable
-```
+
+`Enable`
+
 
 Choose:
 
-```text
-Save changes
-```
+`Save changes`
 
 
 ---
 
-### **Step 4: Verify Configuration**
+**Step 4: Verify Configuration**
 
 Confirm the status displays:
 
-```text
-Enabled
-```
+`Enabled`
 
 ---
-### **Step 5: Upload sample object**
+**Step 5: Upload sample object**
 ---
 
 ## **Task 2 Success Criteria**

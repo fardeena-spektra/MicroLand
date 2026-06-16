@@ -10,7 +10,7 @@ Resources:
       EnableDnsHostnames: true
       Tags:
         - Key: Name
-          Value: Lab-VPC-2272985
+          Value: Lab-VPC-2277453
 
 Outputs:
   VpcId:
