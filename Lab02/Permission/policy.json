@@ -3,50 +3,63 @@
   "Statement": [
 
     {
-      "Sid": "AllowS3FullAccess",
+      "Sid": "AllowS3FullAccessInUsEast1",
       "Effect": "Allow",
       "Action": "s3:*",
-      "Resource": "*"
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
     },
 
     {
-      "Sid": "AllowCloudFormation",
+      "Sid": "AllowCloudFormationInUsEast1",
       "Effect": "Allow",
       "Action": "cloudformation:*",
-      "Resource": "*"
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
     },
 
     {
-      "Sid": "AllowEC2",
+      "Sid": "AllowEC2InUsEast1",
       "Effect": "Allow",
       "Action": "ec2:*",
-      "Resource": "*"
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
     },
 
     {
-      "Sid": "AllowIAMReadAndCreateForLabOnly",
+      "Sid": "AllowIAMReadAndCreateRolesOnly",
       "Effect": "Allow",
       "Action": [
-        "iam:CreateRole",
         "iam:GetRole",
+        "iam:ListRoles",
+        "iam:CreateRole",
         "iam:TagRole",
         "iam:UntagRole",
-        "iam:ListRoles",
-        "iam:ListPolicies",
-        "iam:GetPolicy",
-        "iam:GetPolicyVersion",
+        "iam:ListRoleTags",
+        "iam:ListAttachedRolePolicies",
         "iam:AttachRolePolicy",
         "iam:DetachRolePolicy",
         "iam:PutRolePolicy",
         "iam:GetRolePolicy",
-        "iam:ListAttachedRolePolicies",
         "iam:ListRolePolicies"
       ],
       "Resource": "*"
     },
 
     {
-      "Sid": "AllowPassRoleForLabServicesOnly",
+      "Sid": "AllowPassRoleForCloudFormationAndEC2",
       "Effect": "Allow",
       "Action": "iam:PassRole",
       "Resource": [
@@ -64,24 +77,19 @@
     },
 
     {
-      "Sid": "DenyIAMDeletionFullStop",
+      "Sid": "DenyIAMDeleteAndUserGroupManagement",
       "Effect": "Deny",
       "Action": [
         "iam:DeleteRole",
-        "iam:DeleteUser",
         "iam:DeletePolicy",
         "iam:DetachRolePolicy",
-        "iam:RemoveRoleFromInstanceProfile"
-      ],
-      "Resource": "*"
-    },
-
-    {
-      "Sid": "DenyCreatingSensitiveIAMEntities",
-      "Effect": "Deny",
-      "Action": [
+        "iam:RemoveRoleFromInstanceProfile",
         "iam:CreateUser",
-        "iam:CreatePolicy"
+        "iam:CreateGroup",
+        "iam:AddUserToGroup",
+        "iam:RemoveUserFromGroup",
+        "iam:DeleteUser",
+        "iam:DeleteGroup"
       ],
       "Resource": "*"
     }
