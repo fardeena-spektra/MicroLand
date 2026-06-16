@@ -50,9 +50,7 @@ You have been provided access to:
 
 AWS Region:
 
-```text
-us-east-1
-```
+`us-east-1`
 
 ---
 
@@ -97,17 +95,17 @@ Deploy the template and verify that:
 
 # **Task 1: Create and Upload the CloudFormation Template**
 
-## **Task Overview**
+### **Task Overview**
 
 In this task, you will create a CloudFormation template and upload it to Amazon S3.
 
-### **Step 1: Open VS Code**
+**Step 1: Open VS Code**
 
 Launch VS Code from the lab virtual machine.
 
 ---
 
-### **Step 2: Create Template File**
+**Step 2: Create Template File**
 
 Create a file named:
 
@@ -117,15 +115,13 @@ vpc-template.yaml
 
 ---
 
-### **Step 3: Define the VPC Resource**
+**Step 3: Define the VPC Resource**
 
 Configure the template to create:
 
 * Resource Type:
 
-```text
-AWS::EC2::VPC
-```
+`AWS::EC2::VPC`
 
 * CIDR Block:
 
@@ -141,7 +137,7 @@ Lab-VPC-<inject key="CloudLabsDeploymentID" enableCopy="true"/>
 
 ---
 
-### **Step 4: Save the Template**
+**Step 4: Save the Template**
 
 Save the file:
 
@@ -153,7 +149,7 @@ Verify the file exists.
 
 ---
 
-### **Step 5: Create the S3 Bucket**
+**Step 5: Create the S3 Bucket**
 
 Using the AWS Console, create an S3 bucket named:
 
@@ -163,13 +159,11 @@ cftbucket-<inject key="CloudLabsDeploymentID" enableCopy="true"/>
 
 Ensure the bucket is created in:
 
-```text
-us-east-1
-```
+`us-east-1`
 
 ---
 
-### **Step 6: Upload the Template**
+**Step 6: Upload the Template**
 
 Upload the following file into the bucket:
 
@@ -201,45 +195,37 @@ After completing the task, click the **Validation** tab.
 
 # **Task 2: Deploy the CloudFormation Stack**
 
-## **Task Overview**
+### **Task Overview**
 
 In this task, you will deploy the CloudFormation stack.
 
-### **Step 1: Open CloudFormation**
+**Step 1: Open CloudFormation**
 
 Search for:
 
-```text
-CloudFormation
-```
+`CloudFormation`
 
 Open the CloudFormation service.
 
 ---
 
-### **Step 2: Create Stack**
+**Step 2: Create Stack**
 
 Choose:
 
-```text
-Create stack
-```
+`Create stack`
 
 Select:
 
-```text
-With new resources (standard)
-```
+`With new resources (standard)`
 
 ---
 
-### **Step 3: Specify Template Source**
+**Step 3: Specify Template Source**
 
 Choose:
 
-```text
-Amazon S3 URL
-```
+`Amazon S3 URL`
 
 Use the template stored in Amazon S3 using the following URL format:
 
@@ -249,14 +235,12 @@ https://cftbucket-<inject key="CloudLabsDeploymentID" enableCopy="true"/>.s3.ama
 
 Choose:
 
-```text
-Next
-```
+`Next`
 
 
 ---
 
-### **Step 4: Configure Stack**
+**Step 4: Configure Stack**
 
 Specify the stack name:
 
@@ -266,15 +250,13 @@ Lab-VPC-Stack-<inject key="CloudLabsDeploymentID" enableCopy="true"/>
 
 Choose:
 
-```text
-Next
-```
+`Next`
 
 Accept the default settings and continue.
 
 ---
 
-### **Step 5: Select IAM role & Deploy Stack**
+**Step 5: Select IAM role & Deploy Stack**
 Select following role :
 
 ```
@@ -282,21 +264,17 @@ cft-vpc-role
 ```
 Choose:
 
-```text
-Submit
-```
+`Submit`
 
 Wait for deployment to complete.
 
 ---
 
-### **Step 6: Verify Stack Status**
+**Step 6: Verify Stack Status**
 
 Confirm the stack status displays:
 
-```text
-CREATE_COMPLETE
-```
+`CREATE_COMPLETE`
 
 Verify that the VPC resource exists.
 

@@ -197,9 +197,11 @@ Confirm the status displays:
 `Enabled`
 
 ---
-**Step 5: Upload sample object**
----
 
+
+**Step 5: Upload sample object**
+
+---
 ## **Task 2 Success Criteria**
 
 Your solution is successful when:

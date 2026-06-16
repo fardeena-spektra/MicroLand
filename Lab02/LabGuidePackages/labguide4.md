@@ -93,25 +93,21 @@ In this task, you will create an S3 bucket and enable static website hosting.
 
 ---
 
-### **Step 1: Open Amazon S3**
+**Step 1: Open Amazon S3**
 
 From the AWS Console:
 
 Navigate to:
 
-```text
-Services → S3
-```
+`Services → S3`
 
 ---
 
-### **Step 2: Create the Bucket**
+**Step 2: Create the Bucket**
 
 Select:
 
-```text
-Create bucket
-```
+`Create bucket`
 
 Configure:
 
@@ -123,39 +119,29 @@ Configure:
 
 Select:
 
-```text
-Create bucket
-```
+`Create bucket`
 
 ---
 
-### **Step 3: Disable Block Public Access**
+**Step 3: Disable Block Public Access**
 
 Open the bucket.
 
 Navigate to:
 
-```text
-Permissions
-```
+`Permissions`
 
 Under:
 
-```text
-Block public access
-```
+`Block public access`
 
 Select:
 
-```text
-Edit
-```
+`Edit`
 
 Disable:
 
-```text
-Block all public access
-```
+`Block all public access`
 
 Acknowledge the warning.
 
@@ -163,25 +149,19 @@ Save changes.
 
 ---
 
-### **Step 4: Enable Static Website Hosting**
+**Step 4: Enable Static Website Hosting**
 
 Navigate to:
 
-```text
-Properties
-```
+`Properties`
 
 Under:
 
-```text
-Static website hosting
-```
+`Static website hosting`
 
 Select:
 
-```text
-Edit
-```
+`Edit`
 
 Configure:
 
@@ -220,13 +200,11 @@ In this task, you will upload website files and verify accessibility.
 
 ---
 
-### **Step 1: Create Website Content**
+**Step 1: Create Website Content**
 
 Create a file named:
 
-```text
-index.html
-```
+`index.html`
 
 Sample content:
 
@@ -246,45 +224,35 @@ Save the file.
 
 ---
 
-### **Step 2: Upload Website Files**
+**Step 2: Upload Website Files**
 
 Inside the bucket:
 
 Select:
 
-```text
-Upload
-```
+`Upload`
 
 Upload:
 
-```text
-index.html
-```
+`index.html`
 
 Complete the upload.
 
 ---
 
-### **Step 3: Configure Bucket Policy**
+**Step 3: Configure Bucket Policy**
 
 Navigate to:
 
-```text
-Permissions
-```
+`Permissions`
 
 Under:
 
-```text
-Bucket Policy
-```
+`Bucket Policy`
 
 Select:
 
-```text
-Edit
-```
+`Edit`
 
 Update:
 
@@ -307,25 +275,19 @@ Save changes.
 
 ---
 
-### **Step 4: Retrieve Website Endpoint**
+**Step 4: Retrieve Website Endpoint**
 
 Navigate to:
 
-```text
-Properties
-```
+`Properties`
 
 Locate:
 
-```text
-Static website hosting
-```
+`Static website hosting`
 
 Copy the:
 
-```text
-Bucket website endpoint
-```
+`Bucket website endpoint`
 
 Example:
 
@@ -335,16 +297,16 @@ http://static-website-demo.s3-website-us-east-1.amazonaws.com
 
 ---
 
-### **Step 5: Verify Website Accessibility**
+**Step 5: Verify Website Accessibility**
 
 Open the website endpoint in a browser.
 
 Expected output:
 
-```text
+`text
 Welcome to CloudLabs
 Static Website Hosting Lab
-```
+`
 
 ---
 

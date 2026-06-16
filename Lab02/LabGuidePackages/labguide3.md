@@ -43,9 +43,7 @@ You have been provided access to:
 
 AWS Region:
 
-```text id="rgv8ma"
-us-east-1
-```
+`us-east-1`
 
 ---
 
@@ -79,61 +77,49 @@ AmazonS3ReadOnlyAccess
 
 # **Task 1: Create an IAM Role**
 
-## **Task Overview**
+### **Task Overview**
 
 In this task, you will create a new IAM role.
 
-### **Step 1: Open IAM**
+**Step 1: Open IAM**
 
 From the AWS Management Console, search for:
 
-```text id="d3hjqp"
-IAM
-```
+`IAM`
 
 Select the IAM service.
 
 ---
 
-### **Step 2: Navigate to Roles**
+**Step 2: Navigate to Roles**
 
 From the navigation pane, choose:
 
-```text id="v5w29f"
-Roles
-```
+`Roles`
 
 Choose:
 
-```text id="e8ucqj"
-Create role
-```
+`Create role`
 
 ---
 
-### **Step 3: Configure Trusted Entity**
+**Step 3: Configure Trusted Entity**
 
 Select:
 
-```text id="g0zpsm"
-AWS service
-```
+`AWS service`
 
 Use case:
 
-```text id="ar4mvt"
-EC2
-```
+`EC2`
 
 Choose:
 
-```text id="qp2lxy"
-Next
-```
+`Next`
 
 ---
 
-### **Step 4: Specify Role Name**
+**Step 4: Specify Role Name**
 
 Role Name:
 
@@ -143,9 +129,7 @@ Lab-S3-ReadOnly-Role
 
 Choose:
 
-```text id="k9v8tn"
-Create role
-```
+`Create role`
 
 ---
 
@@ -167,37 +151,31 @@ After completing the task, click the **Validation** tab.
 
 # **Task 2: Attach an IAM Policy**
 
-## **Task Overview**
+### **Task Overview**
 
 In this task, you will attach an AWS managed policy to the IAM role.
 
-### **Step 1: Open the IAM Role**
+**Step 1: Open the IAM Role**
 
 Select the role created in Task 1:
 
-```text id="yxk8zr"
-Lab-S3-ReadOnly-Role
-```
+`Lab-S3-ReadOnly-Role`
 
 ---
 
-### **Step 2: Add Permissions**
+**Step 2: Add Permissions**
 
 Choose:
 
-```text id="cm4lba"
-Add permissions
-```
+`Add permissions`
 
 Select:
 
-```text id="jb3yfw"
-Attach policies
-```
+`Attach policies`
 
 ---
 
-### **Step 3: Select Policy**
+**Step 3: Select Policy**
 
 Search for:
 
@@ -209,13 +187,11 @@ Select the policy.
 
 Choose:
 
-```text id="h9v3gx"
-Add permissions
-```
+`Add permissions`
 
 ---
 
-### **Step 4: Verify Policy Attachment**
+**Step 4: Verify Policy Attachment**
 
 Confirm that the following policy appears under Permissions:
 
@@ -224,7 +200,7 @@ AmazonS3ReadOnlyAccess
 ```
 
 ---
-### **Step 5: Attach IAM role to given EC2 Instance**
+**Step 5: Attach IAM role to given EC2 Instance**
 
 #### Instance Name :
 ```

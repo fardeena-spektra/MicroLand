@@ -1,6 +1,4 @@
-# **Cloud (AWS, AWS devops, Github, jenkins, git, terraform, cloud formaiton template) -Assessment 2
-Cloud (AWS, AWS devops, Github, jenkins, git, terraform, cloud formaiton template) -Assessment 2
-** 
+# **Cloud (AWS, AWS devops, Github, jenkins, git, terraform, cloud formaiton template) -Assessment 2** 
 **Duration: 90 Minutes**
 
 ## **Getting Started with the Lab**
