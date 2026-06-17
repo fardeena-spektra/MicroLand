@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "MS SQL Server — Query Tuning & Always On AG (Lab 01)",
+    "Language": "English",
+    "BaseURL": "https://raw.githubusercontent.com/Raghavendra-spektra/Mciroland-test/refs/heads/main/Lab-01-MSSQL-Server/LabGuidePackage/LabGuide/",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/Raghavendra-spektra/Mciroland-test/refs/heads/main/Lab-01-MSSQL-Server/LabGuidePackage/LabGuide/GettingStarted.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/Raghavendra-spektra/Mciroland-test/refs/heads/main/Lab-01-MSSQL-Server/LabGuidePackage/LabGuide/labguide-1.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/Raghavendra-spektra/Mciroland-test/refs/heads/main/Lab-01-MSSQL-Server/LabGuidePackage/LabGuide/labguide-2.md",
+        "Order": 3
+      }
+    ]
+  }
+]
