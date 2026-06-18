@@ -23,4 +23,4 @@ Use Query Store (or the DMVs such as `sys.dm_exec_query_stats`) and the actual e
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="1c50afe8-464e-4264-b904-d79f325ddc1b" />
+<validation step="5b8a7a39-c3a3-4b63-b993-b80671f6f5de" />

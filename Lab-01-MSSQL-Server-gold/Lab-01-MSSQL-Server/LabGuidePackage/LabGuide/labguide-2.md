@@ -29,4 +29,4 @@ On both nodes, create the database-mirroring **endpoint** on **TCP 5022** with a
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="57bccd72-32bb-42ce-a3ba-dc58a10aceea" />
+<validation step="2df22f39-d75a-41cf-be6f-a401f5f6b94f" />
