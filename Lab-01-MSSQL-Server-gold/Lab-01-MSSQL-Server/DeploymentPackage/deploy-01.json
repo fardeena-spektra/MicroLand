@@ -32,7 +32,7 @@
     "labSeedUser": "labuser",
     "AzureSubscriptionID": "[subscription().subscriptionId]",
     "AzureTenantID": "[subscription().tenantId]",
-    "bootstrapScriptUri": "https://raw.githubusercontent.com/Raghavendra-spektra/Mciroland-test/refs/heads/main/Lab-01-MSSQL-Server/DeploymentPackage/bootstrap-01.sh",
+    "bootstrapScriptUri": "https://microlandtemplate-67447.s3.us-east-1.amazonaws.com/MSSQL/bootstrap-01.sh",
     "addressPrefix": "10.0.0.0/16",
     "networkInterfaceName": "[concat(variables('vmName'), '-nic')]",
     "networkSecurityGroupName": "[concat(variables('vmName'), '-nsg')]",
