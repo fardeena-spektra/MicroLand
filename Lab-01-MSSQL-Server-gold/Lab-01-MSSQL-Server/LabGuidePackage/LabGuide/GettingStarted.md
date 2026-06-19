@@ -33,6 +33,7 @@ flowchart LR
 ## Getting Started with the lab
 
 Your virtual machines and this **Guide** are available within your web browser.
+
 ![alt text](./media/images/00.png) 
 
 Use the **Split Window** button at the top-right to open the guide beside your terminal.
@@ -68,6 +69,7 @@ Use the **Split Window** button at the top-right to open the guide beside your t
 - Both nodes have SQL Server installed with the Always On **`hadr`** feature **enabled**, ready for you to create the `AG_Sales` Availability Group.
 
 `You can use Environment tab for getting Environment details` 
+
 ![alt text](./media/images/01.png)
 
 ## Track Your Progress
