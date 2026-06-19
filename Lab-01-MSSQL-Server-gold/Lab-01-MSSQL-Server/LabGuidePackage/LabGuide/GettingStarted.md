@@ -32,10 +32,14 @@ flowchart LR
 
 ## Getting Started with the lab
 
-Your virtual machines and this **Guide** are available within your web browser. Use the **Split Window** button at the top-right to open the guide beside your terminal.
+Your virtual machines and this **Guide** are available within your web browser.
+![alt text](./media/images/00.png) 
 
+Use the **Split Window** button at the top-right to open the guide beside your terminal.
+
+![alt text](./media/images/03.png)
 ## Accessing Your Lab Environment
-![alt text](./media/images/00.png)
+
 1. Connect to the **primary** SQL node over SSH using the details on the **Environment** tab.
 
     - **SSH command:** see the **LABVM SSH Command** output on the **Environment** tab
@@ -63,13 +67,18 @@ Your virtual machines and this **Guide** are available within your web browser. 
 - On the **primary**, the **`SalesDB`** database contains **`dbo.Orders`** (~100,000 rows) whose `CustomerId` column is **not indexed**, and **Query Store is enabled** so you can locate the slow query.
 - Both nodes have SQL Server installed with the Always On **`hadr`** feature **enabled**, ready for you to create the `AG_Sales` Availability Group.
 
+`You can use Environment tab for getting Environment details` 
 ![alt text](./media/images/01.png)
 
 ## Track Your Progress
 
-Use the **Validate** button on each task to check your work. The **Progress** tab shows your validation score; it reaches 100% when all task validations pass.
+Use the **Validate** button on each task to check your work. 
 
 ![alt text](./media/images/02.png)
+
+The **Progress** tab shows your validation score; it reaches 100% when all task validations pass.
+
+![](./media/images/04.png)
 
 ## Lab Duration Extension
 
